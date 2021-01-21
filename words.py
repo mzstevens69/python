@@ -8,9 +8,16 @@ def fetch_story():
         for letter in line_letters:
             new_paragraph.append(letter)
     paragraph.close()
+    return paragraph
 
+def print_paragraph(new_paragraph):
     for word in new_paragraph:
         print(word)
 
+def main():
+    words = fetch_story()
+    print_paragraph(words)
+
+
 if __name__ == ' __main__':
-    fetch_story()
+    main()
